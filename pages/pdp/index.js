@@ -79,7 +79,7 @@ export async function getServerSideProps(context) {
     }
 
     let data = []
-    data = await axios.get(`http://localhost:3000/api/product_match/?SkinID=${params.SkinID}&authenticationToken=${params.authenticationToken}&category=Serum`);
+    data = await axios.get(`https://hellohaut-next.vercel.app/api/product_match/?SkinID=${params.SkinID}&authenticationToken=${params.authenticationToken}&category=Serum`);
   
     return {
       props: {
