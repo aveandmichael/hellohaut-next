@@ -1,0 +1,272 @@
+.MainWrapper{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.MainWrapper{
+    background-color: #fff;
+    min-height: 100vh;
+    overflow-x: 0;
+}
+.Container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.MainTitle{
+    text-align: center;
+}
+.MainTitle h1{
+    padding: 16px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.DisplayStyleBtns{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    padding: 16px 0;
+    border-radius: 5px;
+}
+.DisplayStyleBtns button{
+    border: none;
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.DisplayStyleBtns button:hover{
+    color: #f79410;
+}
+.ActiveBtn{
+    color: #f79410;
+}
+
+
+.ItemList{
+    margin: 36px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+}
+.Item{
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(15, 4, 4, 0.05);
+    transition: all 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.Item:hover{
+    box-shadow: 0 0 10px 1px rgba(0, 4, 4, 0.15);
+}
+.ItemMatchRating {
+    color: rgb(4, 156, 4);
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 0;
+}
+.ItemImg{
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    height: 260px;
+}
+.ItemImg img{
+    width: 80%;
+    margin: 16px auto;
+    height: 100%;
+    object-fit: contain;
+}
+.IconList{
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+.IconList button{
+    border: none;
+    background-color: #202020;
+    color: #fff;
+    margin: 0 6px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.IconList button:hover{
+    background-color: #f4f4f4;
+    color: #202020;
+}
+.ItemImg:hover .IconList{
+    bottom: 26px;
+}
+.ItemDetail{
+    padding: 16px;
+    color: #202020;
+    text-align: center;
+}
+.ItemName{
+    font-weight: 500;
+    font-size: 16px;
+    color: #202020;
+    display: block;
+    height: 50px;
+}
+.ItemPrice{
+    margin: 10px 0;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.OldPrice{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.NewPrice{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.ItemDetail a {
+    text-decoration: none;
+}
+.ItemDetail a:hover {
+    color: #9cb8a0;
+}
+.ItemDetail p{
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 15px;
+    line-height: 1.7;
+    display: none;
+}
+.AddBtn{
+    margin: 16px 0;
+    text-transform: uppercase;
+    border: none;
+    background-color: #9cb8a0;
+    color: #fff;
+    font-family: inherit;
+    padding: 5px 20px;
+    border: 1px solid #202020;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.AddBtn:hover{
+    background-color: #fff;
+    color: #202020;
+}
+
+.DetailsActive img {
+    width: 20%;
+}
+
+
+/* stylings for details active */
+.DetailsActive.Itemlist{
+    grid-template-columns: 100%;
+}
+.DetailsActive .Item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.DetailsActive .ItemDetail{
+    text-align: left;
+}
+.DetailsActive .item-price{
+    justify-content: flex-start;
+}
+.DetailsActive .ItemDetail p{
+    display: block;
+}
+.DetailsActive .ItemDetail .AddBtn{
+    display: block;
+}
+
+.Checked {
+    color: orange;
+}
+
+  .ItemBrand{
+    font-weight: 300;
+    font-size: 15px;
+    color: #202020;
+    text-decoration: none;
+  }
+
+  .IconList a {
+    border: none;
+    background-color: #202020;
+    color: #fff;
+    margin: 0 6px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.LoadingIndicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.LoadingIndicator img {
+width: 30px;
+height: 30px;
+}
+
+
+
+@media screen and (min-width: 678px){
+    .ItemList{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .ItemList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px){
+    .DetailsActive .Item{
+        grid-template-columns: 100%;
+    }
+}   
